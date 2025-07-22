@@ -1,0 +1,215 @@
+:root {
+  --primary: #004080;
+  --secondary: #f5f5f5;
+  --text-dark: #333;
+  --text-light: white;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background-color: var(--secondary);
+  color: var(--text-dark);
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+header {
+  background-color: var(--primary);
+  color: var(--text-light);
+  padding: 2rem 0;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.section {
+  padding: 60px 0;
+  animation: fadeIn 1s ease-in;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  width: 200px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.skill {
+  background-color: white;
+  padding: 15px;
+  border: 2px solid var(--primary);
+  text-align: center;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.skill:hover {
+  transform: scale(1.05);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  background: var(--primary);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+form button:hover {
+  background: #002c5f;
+}
+
+.confirmation {
+  color: green;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+footer {
+  background-color: #eee;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (min-width: 768px) {
+  .about {
+    flex-direction: row;
+    text-align: left;
+  }
+}
+.icon-img {
+  width: 32px;   /* taille plus grande */
+  height: 32px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+/* Conteneur des infos */
+.contact-info {
+  margin-top: 30px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Titre */
+.contact-info h3 {
+  font-size: 20px;
+  color: #1f2937;
+  margin-bottom: 15px;
+}
+
+/* Lignes d’info avec icônes */
+.contact-info p {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+/* Icônes devant les infos */
+.contact-info .icon {
+  color: #2563eb; /* bleu */
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+/* Réseaux sociaux */
+.socials {
+  margin-top: 15px;
+}
+
+.socials a {
+  font-size: 22px;
+  margin-right: 15px;
+  color: #374151;
+  transition: color 0.3s;
+}
+
+.socials a:hover {
+  color: #06d6a0; /* couleur au survol */
+}
+.project-card h3 {
+  font-size: 1.2rem;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 5px;
+  margin-right: 10px;
+  padding: 6px 12px;
+  background-color: var(--primary);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  transition: background-color 0.3s;
+}
+
+.project-card a:hover {
+  background-color: #002c5f;
+}
